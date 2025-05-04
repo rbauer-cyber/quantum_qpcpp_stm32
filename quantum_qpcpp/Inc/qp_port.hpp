@@ -183,6 +183,9 @@ extern "C" {
     void QF_int_enable_(void);
     void QF_crit_entry_(void);
     void QF_crit_exit_(void);
+    volatile std::uint16_t QF_getSysAppEvent(void);
+    volatile void QF_setSysAppEvent(void);
+    volatile void QF_clearSysAppEvent(void);
 
     extern std::int32_t volatile QF_int_lock_nest_;
 } // extern "C"

@@ -36,6 +36,9 @@
 #include "qp_port.hpp"
 #include "qsafe.h"        // QP Functional Safety (FuSa) Subsystem
 
+#define USE_HAL
+#define RAB_CHANGE
+
 extern "C" {
 
 #define SCB_SYSPRI   ((uint32_t volatile *)0xE000ED18U)

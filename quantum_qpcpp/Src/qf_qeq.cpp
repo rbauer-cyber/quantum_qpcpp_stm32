@@ -196,6 +196,7 @@ bool QEQueue::post(
         status = false; // event not posted
     }
 
+    QF_setSysAppEvent();
     QF_MEM_APP();
     QF_CRIT_EXIT();
 
@@ -280,6 +281,7 @@ void QEQueue::postLIFO(
         m_ring[tmp] = frontEvt;
     }
 
+    QF_setSysAppEvent();
     QF_MEM_APP();
     QF_CRIT_EXIT();
 }
@@ -362,6 +364,7 @@ QEvt const * QEQueue::get(std::uint_fast8_t const qsId) noexcept {
         }
     }
 
+    QF_setSysAppEvent();
     QF_MEM_APP();
     QF_CRIT_EXIT();
 
